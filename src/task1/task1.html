@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Task 1</title>
+    <style>
+      .red {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" name="name" id="name_input" value="Xxxx" oninput="onChangeInput(this)">
+  </body>
+
+  <script>
+    // Без создания глобальных переменных
+    function onChangeInput(element) {
+      const initialValue = element.getAttribute('value');
+      if (initialValue !== element.value) {
+        element.classList = 'red';
+      }
+      else {
+        element.classList.remove('red');
+      }
+    }
+  </script>
+</html>
